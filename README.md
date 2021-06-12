@@ -9,7 +9,11 @@ This is a library contianing various quality of life aswell as some Houdini Engi
 ## Setup
 - Clone this repository
   - Master is the most stable branch
-  - Develop contains the newest features and fixes
+  - Develop contains the newest features and fixes but may be instable.
+- Run the installer.bat 
+  - The installer will find **all** Houdini Versions in User Documents and place a package.json file. 
+- To uninstall the toolkit just run the uninstaller.bat
+  - This will remove all remove **all** HGToolkit.json files from the package folders.
 
 ---
 
@@ -41,9 +45,9 @@ If a tool drastically changes in behavior, a new version must be created on file
 |Geometry|All tools that modify geometry|
 |UVs|All tools that modify uvs|
 |PDG|All tools that were created for use in PDG|
-|Utility|All tools that are more utility base.|
+|Utilities|All tools that are more utility base.|
 |Generators|All tools that generate something|
-
+|TBD|More if needed...|
 
 ---
 

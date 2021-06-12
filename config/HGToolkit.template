@@ -1,0 +1,32 @@
+{
+    "path": "$HGTOOLKIT", 
+    "load_package_once": true, 
+    "enable": true, 
+    "version": "1.0", 
+    "env": [
+        {
+            "HGTOOLKIT" : "xxx"
+        },
+        { 
+            "HOUDINI_OPLIBRARIES_PATH": {
+                "method":"append", 
+                "value": [
+                    "$HGTOOLKIT/HGToolkit/OPlibraries"
+                ]
+            }
+        },
+        {
+            "HOUDINI_OTLSCAN_PATH": {
+                "method":"append",
+                "value": [
+                    "$HGTOOLKIT/HGToolkit/Utilities",
+                    "$HGTOOLKIT/HGToolkit/Geometry",
+                    "$HGTOOLKIT/HGToolkit/PDG",
+                    "$HGTOOLKIT/HGToolkit/UVs",
+                    "$HGTOOLKIT/HGToolkit/Generators"
+                ]
+            } 
+            
+        }
+    ]
+}
