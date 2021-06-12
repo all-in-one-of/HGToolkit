@@ -1,0 +1,10 @@
+*
+!.git/*
+!.github/*
+
+!*.md
+!*.gitignore
+!*.hda
+!*.hdalc
+!*.hdanc
+!*.yml
