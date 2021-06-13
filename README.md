@@ -2,8 +2,9 @@
 [![buildOPLibs](https://github.com/kggx/HGToolkit/actions/workflows/build_oplibraries.yml/badge.svg)](https://github.com/kggx/HGToolkit/actions/workflows/build_oplibraries.yml)
 
 # Houdini Games Toolkit
+![alt text](https://github.com/kggx/HGToolkit/blob/master/DeveloperTools/image/HGT_LOGO.png?raw=true)
 
-**Logo**
+---
 
 This is a library contianing various quality of life aswell as some Houdini Engine specific tools.
 
