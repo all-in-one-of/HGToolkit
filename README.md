@@ -37,7 +37,7 @@ We do the review process to ensure quality, performance, usability of the tools 
 |:---|:----|
 |ToolIdentifier|Unique Identifier for the tool. Only letters and underscores are allowed.|
 |ToolDisplayName|This will be shown to the user|
-|ToolIcon|Use a appropiate icon to visualize the tools function. A full list can be found here.|
+|ToolIcon|Use a appropiate icon to visualize the tools function. You can use the default houdini icons!|
 |ToolVersion|This is the major version of the tool.
 |HoudiniLicense|This indicates the version the tool was created in. (FC = Full, LC = Limited & NC = NonCommerial)|
 |ToolGroup|This indicates the tool use case. f.E: PGD, Geometry, Houdini Engine|
