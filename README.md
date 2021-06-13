@@ -4,33 +4,42 @@
 # Houdini Games Toolkit
 ![alt text](https://github.com/kggx/HGToolkit/blob/master/DeveloperTools/image/HGT_LOGO.png?raw=true)
 
----
 
-This is a library contianing various quality of life aswell as some Houdini Engine specific tools.
+This is a library contianing various quality of life tools aswell as some Houdini Engine specific tools & generators.
 
 ---
 
 ## Setup
-- Clone this repository
+- Clone (or download & unzip) this repository into a permanent location.
   - Master is the most stable branch
   - Develop contains the newest features and fixes but may be instable.
 - Run the installer.bat 
-  - The installer will find **all** Houdini Versions in User Documents and place a package.json file. 
+  - The installer will find **all** Houdini Versions in User Documents and place a pre configured HGToolkit.json file in the packages folders. 
 - To uninstall the toolkit just run the uninstaller.bat
   - This will remove all remove **all** HGToolkit.json files from the package folders.
 
 ---
 
-## Naming & HDA Informations
+## Contributing
+Feel free to contribute and follow the given guide how to create and name tools. 
 
-### Variables
+1. Create a feature in git-flow based on the latest develop branch.
+2. Create your tool in the _HGToolkit/ToolGroup/_ folder. (See below.)
+3. Please minimize the use of external HDAs.
+4. Once you're finished: Open a pull request and the tool will be reviewed. 
+
+We do the review process to ensure quality, performance, usability of the tools and keep the library tidy.
+
+---
+
+### Variables for the naming
 |Variable|Description|
 |:---|:----|
 |ToolIdentifier|Unique Identifier for the tool. Only letters and underscores are allowed.|
 |ToolDisplayName|This will be shown to the user|
 |ToolIcon|Use a appropiate icon to visualize the tools function. A full list can be found here.|
 |ToolVersion|This is the major version of the tool.
-|HoudiniLicense|This indicates the version the tool was created in.|
+|HoudiniLicense|This indicates the version the tool was created in. (FC = Full, LC = Limited & NC = NonCommerial)|
 |ToolGroup|This indicates the tool use case. f.E: PGD, Geometry, Houdini Engine|
 
 ---
@@ -40,9 +49,12 @@ If a tool drastically changes in behavior, a new version must be created on file
 
 {ToolVersion} would change from 1 -> 2 for the new release and so does all of the naming. 
 
+**Example**: hgt_TestTemplate_1_FC.hda --> hgt_TestTemplate_2_FC.hda
 ---
 
 ### Tool Groups
+
+Please use the following groups. We can add more but this requires changes to the HGToolkit.template!
 
 |Group|Description|
 |:---|:---|
@@ -51,7 +63,7 @@ If a tool drastically changes in behavior, a new version must be created on file
 |PDG|All tools that were created for use in PDG|
 |Utilities|All tools that are more utility base.|
 |Generators|All tools that generate something|
-|TBD|More if needed...|
+|...|More can be added if needed...|
 
 ---
 
@@ -61,7 +73,7 @@ All tools follow the following naming pattern.
 hgt_{ToolIdentifier}_{ToolVersion}_{HoudiniLicense}.hda
 ```
 
-**Example**: hgt_TestTemplate_1_lc.hda
+**Example**: hgt_TestTemplate_1_LC.hda
 
 ---
 
@@ -70,25 +82,15 @@ In the "Interactive -> Shelf Tools -> Options" section the hda must feature the 
 - Name: hgt_{ToolIdentifier}
 - Label: {ToolDisplayName} ({ToolVersion} | {HoudiniLicense})
 - Icon: {ToolIcon}
+- Keywords: hgt houdini game toolkit {ToolIdentifier} {ToolVersion} {HoudiniLicense} 
 
 In the "Interactive -> Shelf Tools -> Context" section the hda must feature the following:
 - TAB Submenu Path: "HGT/{ToolGroup}"
 
 ---
 
-## Contributing
-Feel free to contribute and follow the given guide how to create and name tools. 
-
-1. Create a feature in git-flow based on the latest develop branch.
-2. Please minimize the use of external HDAs.
-3. Once you're finished: Open a pull request and the tool will be reviewed. 
-
-We do the review process to ensure quality, performance, usability of the tools and keep the library tidy.
-
----
-
 ## Feature requests & Issues
-Please open a issue with the appropiated tag and describe you're desire.  
+Please open a issue with the appropiated template. Thank you!  
 
 ---
 
