@@ -46,12 +46,17 @@ jobs:
       #    github_token: ${{ secrets.GITHUB_TOKEN }}
       #    branch: ${{ github.ref }}
 
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
       - name: Push to protected branch
         uses: CasperWA/push-protected@v2
         continue-on-error: true
         with:
           token: ${{ secrets.PROTECTED_PUSH }}
           #branch: ${{ github.ref }}
-          branch:  ${{GITHUB_REF##*/}}
+          branch: ${{ steps.extract_branch.outputs.branch }}
           unprotect_reviews: true
 
