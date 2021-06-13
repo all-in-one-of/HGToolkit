@@ -5,7 +5,7 @@
 ![alt text](https://github.com/kggx/HGToolkit/blob/master/DeveloperTools/image/HGT_LOGO.png?raw=true)
 
 
-This is a library contianing various quality of life tools aswell as some Houdini Engine specific tools & generators.
+This is a library contianing various quality of life tools aswell as some Houdini Engine specific tools & generators. The package is configured to work with HOUDINI_OPLIBRARIES_PATH & HOUDINI_OTLSCAN_PATH out of the box. 
 
 ---
 
