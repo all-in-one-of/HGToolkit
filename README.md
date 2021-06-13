@@ -98,4 +98,4 @@ Please open a issue with the appropiated tag and describe you're desire.
 ```
 Can I use this in a (commercial) production? 
 ```
-Yes you can. This is complete open source library. However we do not take responsibility if you lose your work due to a crash.
+Yes you can. This is complete open source library. However you need pay attention to the Houdini License version (LC, NC). Additionally we do not take responsibility if you lose your work due to a crash.

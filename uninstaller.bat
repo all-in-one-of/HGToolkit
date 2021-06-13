@@ -14,7 +14,7 @@ set "CLONEPATH=%CLONEPATH:\=/%"
 
 REM REMOVE FROM ALL HOUDINI PACKAGES
 for /f "tokens=*" %%G in ('dir /b /a:d "%UserProfile%\Documents\houdini*"') do ^
-powershell -Command "(gc 'config\HGToolkit.template') -replace 'xxx', '%CLONEPATH%' | Out-File -Encoding ASCII  '%UserProfile%\Documents\%%G\packages\HGToolkit.json'"
+del "%UserProfile%\Documents\%%G\packages\HGToolkit.json"
 
 
 echo.
