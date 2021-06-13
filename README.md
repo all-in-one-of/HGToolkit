@@ -1,3 +1,6 @@
+[![CodeQL](https://github.com/kggx/HGToolkit/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/kggx/HGToolkit/actions/workflows/codeql-analysis.yml)
+[![buildOPLibs](https://github.com/kggx/HGToolkit/actions/workflows/build_oplibraries.yml/badge.svg)](https://github.com/kggx/HGToolkit/actions/workflows/build_oplibraries.yml)
+
 # Houdini Games Toolkit
 
 **Logo**
