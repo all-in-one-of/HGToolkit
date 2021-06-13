@@ -7,8 +7,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the master & develop branch
   push:
     branches: [ master, develop ]
-  pull_request:
-    branches: [ master, develop ]
+  #pull_request:
+  #  branches: [ master, develop ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,11 +36,21 @@ jobs:
       - name: execute py script
         run: python config/refreshOPLibraries.py # EXECUTES THE PYTHON SCIPT
       
+      # extract branch name
       - name: Extract branch name
-        id: extract_branch
+        if: github.event_name != 'pull_request'
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        
+        run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      # extract branch name on pull request
+      - name: Print branch name
+        if: github.event_name == 'pull_request'
+        run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_HEAD_REF})"
+
+      # print branch name
+      - name: Get branch name
+        run: echo 'The branch name is' $BRANCH_NAME
 
 
       # COMMIT CHANGES
@@ -56,4 +66,4 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${BRANCH_NAME}  
+          branch: GITHUB_REF
