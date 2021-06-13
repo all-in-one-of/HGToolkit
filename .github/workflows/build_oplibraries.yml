@@ -51,6 +51,7 @@ jobs:
         continue-on-error: true
         with:
           token: ${{ secrets.PROTECTED_PUSH }}
-          branch: ${{ github.ref }}
+          #branch: ${{ github.ref }}
+          branch:  ${{GITHUB_REF##*/}}
           unprotect_reviews: true
 
