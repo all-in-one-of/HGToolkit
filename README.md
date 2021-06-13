@@ -50,6 +50,7 @@ If a tool drastically changes in behavior, a new version must be created on file
 {ToolVersion} would change from 1 -> 2 for the new release and so does all of the naming. 
 
 **Example**: hgt_TestTemplate_1_FC.hda --> hgt_TestTemplate_2_FC.hda
+
 ---
 
 ### Tool Groups
@@ -78,14 +79,25 @@ hgt_{ToolIdentifier}_{ToolVersion}_{HoudiniLicense}.hda
 ---
 
 ### HDA Requirements
-In the "Interactive -> Shelf Tools -> Options" section the hda must feature the following:
-- Name: hgt_{ToolIdentifier}
+While creating the HDA you need to use this as a name: 
+- hgt_{ToolIdentifier}_{ToolVersion}_{HoudiniLicense}
+
+In the "Basic" section the hda must feature the following:
 - Label: {ToolDisplayName} ({ToolVersion} | {HoudiniLicense})
-- Icon: {ToolIcon}
+- Icon: {ToolIcon} -> **Check "Embed Icon in Operator"**
+
+In the "Interactive -> Shelf Tools -> Option" section the hda must match the following.
+- Name: $HDA_NAME
+- Label: $HDA_LABEL
+- Icon: $HDA_ICON
 - Keywords: hgt houdini game toolkit {ToolIdentifier} {ToolVersion} {HoudiniLicense} 
 
 In the "Interactive -> Shelf Tools -> Context" section the hda must feature the following:
 - TAB Submenu Path: "HGT/{ToolGroup}"
+
+
+**If you created the asset before you need to specify the name in the  "Interactive -> Shelf Tools -> Option" as the following:**
+- hgt_{ToolIdentifier}_{ToolVersion}_{HoudiniLicense}
 
 ---
 
