@@ -20,3 +20,4 @@ del "%UserProfile%\Documents\%%G\packages\HGToolkit.json"
 echo.
 echo Sucessfully uninstalled for all installed versions of Houdini!
 echo ---------------------------------------------------------------------------------
+pause
