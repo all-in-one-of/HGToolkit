@@ -21,8 +21,6 @@ for root, dirs, files in os.walk(base):
                             print("Hit write.")
                             op_lib.write('\n'+ rel_path)
 
-                    else:
-                        op_lib.close()
 
 
 print ('Done building OPlibraries...')
